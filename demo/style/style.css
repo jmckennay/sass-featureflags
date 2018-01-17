@@ -1,0 +1,14 @@
+.container {
+  display: inline-block;
+  font-weight: normal;
+  padding: 5px;
+  color: white;
+  background: blue;
+}
+
+.container:after {
+  content: "Yeah!";
+  display: inline-block;
+  color: red;
+}
+/*# sourceMappingURL=style.css.map */

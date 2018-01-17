@@ -1,0 +1,18 @@
+@import "../../../dist/feature.functions";
+
+// Current Environment
+$environment: 'ci';
+
+// Environment Names
+$environments: (
+    'ci',
+    'preprod',
+    'prod',
+);
+
+// Feature Flags with Values Per Environment
+$features: (
+    first-feature:  ( true, false, false ),
+    second-feature: ( false, false, false ),
+    third-feature:  ( true, true, true )
+);

@@ -1,0 +1,11 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,UAAU,CAAC;EACP,OAAO,EAAkC,YAAY;EACrD,WAAW,EAAmC,MAAM;EACpD,OAAO,EAAE,GAAG;EACZ,KAAK,EAAE,KAAK;EAER,UAAU,EAAE,IAAI;CAEvB;;AAGG,AAAA,UAAU,AAAA,MAAM,CAAC;EACb,OAAO,EAAE,OAAO;EAChB,OAAO,EAAE,YAAY;EACrB,KAAK,EAAE,GAAG;CACb",
+    "sources": [
+        "style.scss",
+        "modules/_config.scss",
+        "../../dist/_feature.functions.scss"
+    ],
+    "names": [],
+    "file": "style.css"
+}

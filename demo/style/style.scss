@@ -1,0 +1,19 @@
+@import 'modules/config';
+
+.container {
+    display: ternary(feature(first-feature), inline-block, none);
+    font-weight: t(feature(second-feature), bold, normal);
+    padding: 5px;
+    color: white;
+    @include feature(first-feature){
+        background: blue;
+    }
+}
+
+@include features((first-feature, third-feature)){
+    .container:after {
+        content: "Yeah!";
+        display: inline-block;
+        color: red;
+    }
+}
