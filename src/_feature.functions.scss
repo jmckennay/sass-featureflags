@@ -1,0 +1,55 @@
+// Returns true or false for a given feature in the current environment
+@function feature($feature) {
+   @return nth(map-get($features, $feature), index($environments, $environment));
+}
+
+// Returns true if the feature is false
+@function notFeature($feature) {
+    @if (feature($feature) == true) {
+        @return false;
+    }
+    @return true;
+}
+
+// Returns true if all the features in the list are true
+@function features($feature-list) {
+    @each $feature in $feature-list {
+        @if (feature($feature) == false) {
+            @return false;
+        }
+    }
+    @return true;
+}
+
+// Returns true if any of the features is false
+@function notFeatures($feature-list) {
+    @if(features($feature-list) == true) {
+        @return false;
+    }
+    @return true;
+}
+
+// Mixin for the feature function
+@mixin feature($feature) { 
+    @if(feature($feature)) { 
+        @content; 
+    } 
+};
+
+// Mixin for the features function
+@mixin features($feature-list) { 
+    @if(features($feature-list)) { 
+        @content; 
+    } 
+};
+
+// Simple ternary operation
+@function ternary($boolean, $if, $else){
+    @if ($boolean) { @return $if; } 
+    @else { @return $else; }
+}
+
+// Short alias of the ternary function
+@function t($boolean, $if, $else){
+    @return ternary($boolean, $if, $else)
+}

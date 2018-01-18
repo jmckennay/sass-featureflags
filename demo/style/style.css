@@ -11,4 +11,30 @@
   display: inline-block;
   color: red;
 }
+
+.first-feature:after {
+  content: "True";
+}
+
+.second-feature:after {
+  content: "False";
+}
+
+.third-feature:after {
+  content: "True";
+}
+
+table {
+  border-collapse: collapse;
+  margin: .25em;
+}
+
+td, th {
+  border-bottom: 1px solid #000000;
+  padding: .25em .5em;
+}
+
+th {
+  text-align: left;
+}
 /*# sourceMappingURL=style.css.map */

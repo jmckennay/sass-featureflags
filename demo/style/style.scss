@@ -17,3 +17,25 @@
         color: red;
     }
 }
+
+@each $feature, $flag in $features {
+   .#{$feature} {
+        &:after {
+            content: t(nth($flag, index($environments, $environment)), "True", "False");
+        }
+   }
+}
+
+table {
+    border-collapse: collapse;
+    margin: .25em;
+}
+
+td, th {
+    border-bottom: 1px solid #000000;
+    padding: .25em .5em;
+}
+
+th {
+    text-align: left;
+}
