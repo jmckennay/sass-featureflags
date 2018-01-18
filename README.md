@@ -6,7 +6,7 @@ A simple method for supporting feature flags in SCSS.
 
 So with that in mind I wanted a way to achieve this in SCSS to control the release of styles without adding complicated selectors to the compiled CSS.
 
-View the [demo](https://jmckennay.github.io/scss-featureflags/) page.
+View the [demo](https://jmckennay.github.io/sass-featureflags/) page.
 
 # How To
 
